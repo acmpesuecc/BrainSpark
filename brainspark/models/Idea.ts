@@ -1,15 +1,20 @@
-import mongoose from "mongoose";
+import mongoose, { Schema, model } from "mongoose";
 
 export interface IdeaDocument {
   _id: string;
+  user: string;
   title: string;
   description: string;
-  status: string;
+  status: "new" | "inProgress" | "completed";
   createdAt: Date;
   updatedAt: Date;
 }
 
-const ideaSchema = new mongoose.Schema({
+const ideaSchema = new Schema<IdeaDocument>({
+  user: {
+    type: String,
+    required: true,
+  },
   title: {
     type: String,
     required: true,
@@ -29,7 +34,6 @@ const ideaSchema = new mongoose.Schema({
   },
 });
 
-const Idea =
-  mongoose.models.Idea || mongoose.model<IdeaDocument>("Idea", ideaSchema);
+const Idea = mongoose.models?.Idea || model<IdeaDocument>("Idea", ideaSchema);
 
 export default Idea;
