@@ -53,7 +53,7 @@ To run Brain Spark locally, follow these steps:
     ```
 
 ## Contribution
-By @stealthwizz
+By https://github.com/stealthwhizz
 
 ## Usage
 
