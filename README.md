@@ -52,6 +52,9 @@ To run Brain Spark locally, follow these steps:
     npm start
     ```
 
+## Contribution
+By @stealthwizz
+
 ## Usage
 
 Once the development server is running, you can explore the following:
@@ -65,5 +68,3 @@ For production, you can build the app using:
 ```bash
 npm run build
 
-## Contribution
-By @stealthwizz
