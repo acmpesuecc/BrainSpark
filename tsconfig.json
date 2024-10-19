@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",                   // Modern JS features
+    "module": "commonjs",                 // CommonJS modules for Node.js
+    "moduleResolution": "node",           // Correct module resolution strategy
+    "outDir": "./dist",                   // Where to output the compiled files
+    "rootDir": "./src",                   // Root folder for your source files
+    "esModuleInterop": true,              // Ensures interop with ES modules
+    "resolveJsonModule": true,            // Allows importing JSON files
+    "strict": true,                       // Strict type-checking
+    "skipLibCheck": true,                 // Skip type checking of libraries
+    "lib": ["dom", "dom.iterable", "esnext"]  // Support for browser and next-gen JS features
+  },
+  "include": [
+    "src/**/*.ts",        // Include all TypeScript files in the src folder
+    "next-env.d.ts",      // Include Next.js environment types
+    "*.ts",               // Include all TypeScript files in the root
+    "*.tsx",              // Include all TypeScript React files
+    ".next/types/**/*.ts" // Include Next.js generated types
+  ],
+  "exclude": [
+    "node_modules",   // Exclude node_modules
+    "dist"            // Exclude the compiled output folder
+  ]
+}
+
